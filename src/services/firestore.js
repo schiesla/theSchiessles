@@ -14,7 +14,7 @@ firebase.initializeApp({
 const db = firebase.firestore();
 
 export const getWeddingPics = (limit) => {
-    return db.collection('/pictures')
-        .limit(limit)
-        .get();
+    return limit 
+      ? db.collection('/pictures').limit(limit).get()
+      : db.collection('/pictures').get();
 };

@@ -1,11 +1,13 @@
 import React from 'react';
+import ImageCarousel from '../components/ImageCarousel';
+import Row from "react-bootstrap/Row";
 
 class Wedding extends React.Component {
     render() {
        return (
-          <div>
-             <h1>Wedding...</h1>
-          </div>
+          <Row className="justify-content-md-center">
+         <ImageCarousel />
+         </Row>
        )
     }
   }
