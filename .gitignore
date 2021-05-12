@@ -1,3 +1,4 @@
+node_modules
 node_modules/.cache/.eslintcache
 node_modules/.cache/.eslintcache
 node_modules/.cache/babel-loader/6a2a47df798857319f85d31c4285c93e.json
@@ -52,4 +53,5 @@ node_modules/.cache/babel-loader/a8e1a77dae0b77879835d8b3a8ff5a57.json
 node_modules/.cache/babel-loader/cc40a74b13e12754f05ff51a2b762176.json
 node_modules/.cache/babel-loader/dca8726663b2787140e7d24e82aa0aa5.json
 node_modules/.cache/babel-loader/f6a228c52b264ada3d37c228de4e6506.json
+node_modules/.cache/.eslintcache
 node_modules/.cache/.eslintcache
