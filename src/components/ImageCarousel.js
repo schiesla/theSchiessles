@@ -1,31 +1,24 @@
 import React, {useState, useEffect} from 'react';
-import { Carousel } from 'react-bootstrap';
+// import { Carousel } from 'react-bootstrap';
 import * as FirestoreService from '../services/firestore';
 
 function ImageCarousel() {
 
-    const [pictures, setPictures] = useState();
+    const [pictures, setPictures] = useState([]);
     const [error, setError] = useState();
 
     useEffect(() => {
         FirestoreService.getWeddingPics(1).then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                console.log(doc.data());
-                setPictures(pictures.concat(doc.data()));
+                setPictures(pictures => pictures.concat(doc.data().url));
             })
         })
         .catch(() => setError('ERROR'));
-    }, [setPictures]);
+    }, [setPictures, setError]);
 
-    // addElement = (element) => {
-    //     var id = element.id;
-    //     var data = element.data();
-    //   this.setState({ pics: [...this.state.pics, {id: id, url: data.url}]});
-    // }
-    console.log(pictures);
     if (pictures) {
-        return <div>{pictures}</div>
-    }
+        return (<div> {pictures.map((url) => <img src={url}/>)}</div>)
+        }
     else {
         return <div>BUT</div>
     }
