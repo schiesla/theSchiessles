@@ -18,3 +18,9 @@ export const getWeddingPics = (limit) => {
       ? db.collection('/pictures').limit(limit).get()
       : db.collection('/pictures').get();
 };
+
+export const getHousePics = (limit) => {
+    return limit 
+      ? db.collection('/housePictures').limit(limit).get()
+      : db.collection('/housePictures').get();
+};

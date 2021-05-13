@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import { Carousel, Card } from 'react-bootstrap';
-import * as FirestoreService from '../services/firestore';
 
-function ImageCarousel() {
+function ImageCarousel(props) {
 
     const [pictures, setPictures] = useState([]);
     const [error, setError] = useState();
 
     useEffect(() => {
-        FirestoreService.getWeddingPics().then((querySnapshot) => {
+        var search = props.search || (() => null);
+        search().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 setPictures(pictures => [...pictures, {
                     id: doc.id,
@@ -16,12 +16,12 @@ function ImageCarousel() {
             })
         })
         .catch(() => setError('ERROR'));
-    }, [setPictures, setError]);
+    }, [props, setPictures, setError]);
 
     if (pictures) {
         return (
             <Card style={{ width: '50%' }}>
-                <Card.Header>Wedding Photos</Card.Header>
+                <Card.Header>{props.title}</Card.Header>
                 <Card.Body>
                     <Carousel fade>
                         {pictures.map((obj) => {
