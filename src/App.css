@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.row1 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: DodgerBlue;
+}
+
+.row2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: green;
+}
+
+.card-img.pic-style {
+  width: 30%;
+}
