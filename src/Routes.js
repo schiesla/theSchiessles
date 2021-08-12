@@ -11,7 +11,7 @@ export default function Routes() {
       <Route exact path="/"><Main /></Route>
       <Route exact path="/home"><Home /></Route>
       <Route exact path="/wedding"><Wedding /></Route>
-      <Route exact path="/logan/resume"> <Resume /></Route>
+      <Route exact path="/logan/resume"> <Resume title="Logan Schiessle" img={process.env.PUBLIC_URL + "/favicon.ico"}/></Route>
     </Switch>
   );
 }
