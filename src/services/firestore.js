@@ -24,3 +24,7 @@ export const getHousePics = (limit) => {
       ? db.collection('/housePictures').limit(limit).get()
       : db.collection('/housePictures').get();
 };
+
+export const getExperience = () => {
+  return db.collection('/experience').get();
+};
