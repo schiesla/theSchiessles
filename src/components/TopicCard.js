@@ -8,6 +8,7 @@ class TopicCard extends React.Component {
             <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={this.props.img}/>
             <Card.Body>
+                <Card.Img src={this.props.picture}></Card.Img>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>{this.props.text}</Card.Text>
             </Card.Body>

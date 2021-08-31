@@ -19,11 +19,19 @@ export const getWeddingPics = (limit) => {
       : db.collection('/pictures').get();
 };
 
+export const getWeddingPic = (id) => {
+    return db.collection('/pictures').doc(id).get();
+}
+
 export const getHousePics = (limit) => {
     return limit 
       ? db.collection('/housePictures').limit(limit).get()
       : db.collection('/housePictures').get();
 };
+
+export const getHousePic = (id) => {
+  return db.collection('/housePictures').doc(id).get();
+}
 
 export const getExperience = () => {
   return db.collection('/experience').get();
