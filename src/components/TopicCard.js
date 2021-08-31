@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 class TopicCard extends React.Component {
 
@@ -10,7 +10,6 @@ class TopicCard extends React.Component {
             <Card.Body>
                 <Card.Title>{this.props.title}</Card.Title>
                 <Card.Text>{this.props.text}</Card.Text>
-                {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
             </Card> 
         );

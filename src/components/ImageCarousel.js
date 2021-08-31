@@ -16,7 +16,7 @@ function ImageCarousel(props) {
             })
         })
         .catch(() => setError('ERROR'));
-    }, [props, setPictures, setError]);
+    }, [props, setPictures, setError, error]);
 
     if (pictures) {
         return (

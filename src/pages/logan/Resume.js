@@ -2,21 +2,15 @@ import React from 'react';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-import { getExperience } from '../../services/firestore';
+import Experience from "./Experience";
+import Education from "./Education";
 import "../../App.css";
-import { Card, Button, ListGroup, Tab, Tabs, Nav } from 'react-bootstrap';
+import { Card, Tab, Nav } from 'react-bootstrap';
 
 
 class Resume extends React.Component {
     
-    render() {
-        let experiences = [];
-        getExperience().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                experiences.push(<div key={doc.id}>{experienceSection(doc.data())}</div>)
-            })
-        });
-            
+    render() {     
        return (
       <Container fluid>
             <Row className="row1">
@@ -60,10 +54,12 @@ class Resume extends React.Component {
                             <Card.Body>
                                 <Tab.Content>
                                     <Tab.Pane eventKey="first">
-                                        Rose-Hulman Institute of Technology — Bachelors Degree in Computer Science with a minor in Mathematics, 2018
+                                        <h1>Education</h1>
+                                        <Education/>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="second">
-                                        {experiences}
+                                        <h1>Experience</h1>
+                                        <Experience/>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
                                         Java, Javascript, HTML, CSS, Flutter, Cordova, Ionic, AngularJS, KnockoutJS, NodeJS, AWS, MongoDB, Xcode, Android Studio, GitHub, Jira, Adapting to change, Communication
@@ -82,16 +78,3 @@ class Resume extends React.Component {
     }
   }
   export default Resume;
-
-  function experienceSection(exp) {
-      return (
-        <div>
-            <div>{exp.title}, {exp.company} -- {exp.dateRange}</div>
-            <ul>
-                {exp.points.map((value, i) => {
-                    return <li key={i}>{value}</li>
-                })}
-            </ul>
-        </div>
-      );
-  }
