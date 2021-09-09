@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div>
       <NavBar />
-        <Routes />
+      <Routes />
     </div>
   );
 }

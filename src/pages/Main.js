@@ -24,8 +24,6 @@ class Main extends React.Component {
             <Row className="justify-content-around">
                <TopicCard title="The House" picture={this.state.housePicUrl}/>
                <TopicCard title="The Wedding" picture={this.state.weddingPicUrl}/>
-            </Row>
-            <Row className="justify-content-around">
                <TopicCard title = "Title 3" text = "text 3"/>
                <TopicCard title = "Title 4" text = "text 4"/>
             </Row>
