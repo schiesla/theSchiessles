@@ -8,10 +8,10 @@ class NavBar extends React.Component {
                 <Navbar.Brand href="/">Schiessles</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
+                    {/* <Nav className="mr-auto">
                     <Nav.Link href="/home">Home</Nav.Link>
                     <Nav.Link href="/wedding">Wedding</Nav.Link>
-                    </Nav>
+                    </Nav> */}
                 </Navbar.Collapse>
             </Navbar>
         );

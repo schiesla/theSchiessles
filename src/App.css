@@ -64,3 +64,7 @@ body {
 .card-img.pic-style {
   width: 30%;
 }
+
+.space-above {
+  margin-top: 3%;
+}
