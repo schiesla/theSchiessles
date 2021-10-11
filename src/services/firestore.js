@@ -25,8 +25,8 @@ export const getWeddingPic = (id) => {
 
 export const getHousePics = (limit) => {
     return limit 
-      ? db.collection('/housePictures').limit(limit).get()
-      : db.collection('/housePictures').get();
+      ? db.collection('/housePictures').orderBy('index').limit(limit).get()
+      : db.collection('/housePictures').orderBy('index').get();
 };
 
 export const getHousePic = (id) => {

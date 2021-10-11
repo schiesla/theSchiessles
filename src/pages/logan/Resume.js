@@ -62,9 +62,11 @@ class Resume extends React.Component {
                                         <Experience/>
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="third">
+                                        <h1>Skills</h1>
                                         Java, Javascript, HTML, CSS, Flutter, Cordova, Ionic, AngularJS, KnockoutJS, NodeJS, AWS, MongoDB, Xcode, Android Studio, GitHub, Jira, Adapting to change, Communication
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="fourth">
+                                        <h1>References</h1>
                                         Rob Signorelli Melissa Signorelli Alex Crowley
                                     </Tab.Pane>
                                 </Tab.Content>

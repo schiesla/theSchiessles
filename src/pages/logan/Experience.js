@@ -28,7 +28,7 @@ class Experience extends React.Component {
     experienceSection(exp) {
         return (
           <div>
-              <div>{exp.title}, {exp.company} -- {exp.dateRange}</div>
+              <h3>{exp.title}, {exp.company} -- {exp.dateRange}</h3>
               <ul>
                   {exp.points.map((value, i) => {
                       return <li key={i}>{value}</li>

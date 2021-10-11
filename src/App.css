@@ -52,13 +52,13 @@ body {
 .row1 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: DodgerBlue;
+  /* background-color: DodgerBlue; */
 }
 
 .row2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: green;
+  /* background-color: green; */
 }
 
 .card-img.pic-style {
