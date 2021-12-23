@@ -1,5 +1,4 @@
 import React from "react";
-import { experienceCollection } from '../../services/firestore';
 
 class Experience extends React.Component {
     render() {

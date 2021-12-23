@@ -11,7 +11,7 @@ firebase.initializeApp({
   appId: "1:162718333894:web:737d8c3af4a8bdca8950c7"
 });
 
-const db = firebase.firestore();
+export const db = firebase.firestore();
 
 export const getWeddingPics = (limit) => {
     return limit 

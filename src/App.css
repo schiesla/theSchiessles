@@ -3,7 +3,8 @@
 }
 
 html {
-  background: url("./images/black-sand.jpeg") no-repeat center center fixed;
+  /* background: url("./images/black-sand.jpeg") no-repeat center center fixed; */
+  background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
