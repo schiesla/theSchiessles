@@ -1,14 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
-import { store } from './redux/store';
 
-ReactDOM.render(
+import { composeWithDevTools } from 'redux-devtools-extension'
+import { themeReducer } from './redux/reducer';
+import { createStore } from '@reduxjs/toolkit';
+
+const store = createStore(themeReducer, composeWithDevTools());
+
+render(
   <Provider store={store}>
     <Router>
       <App />

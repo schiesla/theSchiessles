@@ -12,7 +12,7 @@ export class ThemeOne implements Theme {
         this.primary = "#000000";
         this.secondary = "#FF5733";
         this.nav = "#000000";
-        this.background = "#FFFFFF"
+        this.background = "#000000"
         this.primaryFont = "#5C5C5C";
         this.secondaryFont = "#C70039";
     }
