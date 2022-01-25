@@ -26,8 +26,8 @@ class Main extends React.Component {
                <TopicCard route="/wedding" title="The Wedding" picture={this.state.weddingPicUrl}/>
             </Row>
             <Row className="justify-content-around space-above">
-               <TopicCard title = "Title 3"/>
-               <TopicCard title = "Title 4"/>
+               <TopicCard route="/home" title = "Title 3" picture={this.state.housePicUrl}/>
+               <TopicCard route="/home" title = "Title 4" picture={this.state.housePicUrl}/>
             </Row>
           </Col>
        )

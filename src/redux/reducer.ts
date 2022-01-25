@@ -1,20 +1,21 @@
 import { Action } from "./actions/actions";
 import { SET_THEME } from "./actions/constants";
-import { ThemeOne } from "../services/theme-one";
+import { themes } from "../services/theme-one";
 import produce from "@reduxjs/toolkit/node_modules/immer";
 
 export type AppState = {
     [key: string]: any
 }
 const initialState: AppState = {
-    theme: new ThemeOne()
+    themes: themes,
+    currentTheme: themes[0]
 }
 
 export function themeReducer(state: AppState = initialState, action: Action): AppState {
     switch(action.type) {
         case SET_THEME: 
             return produce(state, (draftState) => {
-                draftState.theme = action.payload;
+                draftState.currentTheme = action.payload;
             });
         default: 
             return state;
