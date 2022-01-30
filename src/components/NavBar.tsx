@@ -7,25 +7,25 @@ import { Theme } from '../services/Theme';
 
 export const NavBar = () => {
     const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);
-    const themes: Theme[] = useSelector((state: AppState) => state.themes);
+    // const themes: Theme[] = useSelector((state: AppState) => state.themes);
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
-    const changeTheme = (): Theme => {
-        let index = themes.findIndex((theme) => currentTheme === theme);
-        index = (index + 1) % themes.length;
-        return themes[index];
-    }
+    // const changeTheme = (): Theme => {
+    //     let index = themes.findIndex((theme) => currentTheme === theme);
+    //     index = (index + 1) % themes.length;
+    //     return themes[index];
+    // }
 
     return (
         <Navbar style={{backgroundColor: currentTheme.nav}} variant="dark" expand="lg">
             <Navbar.Brand href="/">Schiessles</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Form.Check 
+            {/* <Form.Check 
                 type="switch"
                 id="custom-switch"
                 aria-label="Check this switch"
-                onChange={() => dispatch(setTheme(changeTheme()))}/>
+                onChange={() => dispatch(setTheme(changeTheme()))}/> */}
         </Navbar>
     );
 }
