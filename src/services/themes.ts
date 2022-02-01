@@ -1,4 +1,4 @@
-import { Theme } from "./Theme";
+import { Theme } from "../interfaces/Theme";
 
 class Light implements Theme {
     primary: string;

@@ -1,4 +1,4 @@
-import { Theme } from "../../services/Theme";
+import { Theme } from "../../interfaces/Theme";
 import { SET_THEME } from "./constants";
 
 export interface Action {

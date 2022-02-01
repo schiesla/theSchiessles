@@ -3,7 +3,7 @@ import { Form, Navbar } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { setTheme } from '../redux/actions/actions';
 import { AppState } from '../redux/reducer';
-import { Theme } from '../services/Theme';
+import { Theme } from '../interfaces/Theme';
 
 export const NavBar = () => {
     const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);

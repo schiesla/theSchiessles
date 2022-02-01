@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Card } from 'react-bootstrap';
-import { Theme } from '../services/Theme';
+import { Theme } from '../interfaces/Theme';
 import { Link } from 'react-router-dom';
 import { AppState } from '../redux/reducer';
 import { useSelector } from 'react-redux';

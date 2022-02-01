@@ -1,6 +1,6 @@
 import React from "react";
 import { NavBar } from "./components/NavBar";
-import { Theme } from './services/Theme';
+import { Theme } from './interfaces/Theme';
 
 import Routes from "./Routes";
 import { useDispatch, useSelector } from "react-redux";
