@@ -18,7 +18,7 @@ export const NavBar = () => {
     // }
 
     return (
-        <Navbar style={{backgroundColor: currentTheme.nav}} variant="dark" expand="lg">
+        <Navbar style={{backgroundColor: currentTheme.primary}} variant="dark" expand="lg">
             <Navbar.Brand href="/">Schiessles</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             {/* <Form.Check 
