@@ -18,6 +18,7 @@ export const TopicCard: FC<TopicProps> = (props): JSX.Element => {
     const cardStyle: React.CSSProperties = {
         width: '18rem',
         height: '400px',
+        marginBottom: '40px',
         backgroundColor: currentTheme.surface
     }
 

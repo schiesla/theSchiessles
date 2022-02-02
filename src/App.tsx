@@ -6,6 +6,7 @@ import Routes from "./Routes";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "./redux/reducer";
 import { setTheme } from "./redux/actions/actions";
+import { Navbar } from "react-bootstrap";
 
 export const  App = () => {
   const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);
@@ -21,10 +22,14 @@ export const  App = () => {
     dispatch(setTheme(evt.matches ? themes[0] : themes[1]));
   });
 
+  document.getElementsByTagName("html")[0].style.backgroundColor = currentTheme.background;
+    
   return (
-    <div style={{backgroundColor: currentTheme.background}}>
+    <div>
       <NavBar />
+      <div className="background-match" style={{height: '100vh', backgroundColor: currentTheme.background}}>
       <Routes />
+      </div>
     </div>
   );
 }

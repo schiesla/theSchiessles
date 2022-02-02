@@ -18,14 +18,8 @@ export const NavBar = () => {
     // }
 
     return (
-        <Navbar style={{backgroundColor: currentTheme.primary}} variant="dark" expand="lg">
+        <Navbar sticky="top" style={{backgroundColor: currentTheme.primary}} variant="dark" expand="lg">
             <Navbar.Brand href="/">Schiessles</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            {/* <Form.Check 
-                type="switch"
-                id="custom-switch"
-                aria-label="Check this switch"
-                onChange={() => dispatch(setTheme(changeTheme()))}/> */}
         </Navbar>
     );
 }
