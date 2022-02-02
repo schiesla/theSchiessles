@@ -13,26 +13,30 @@ firebase.initializeApp({
 
 export const db = firebase.firestore();
 
-export const getWeddingPics = (limit) => {
+export const getWeddingPics = (limit: number): Promise<firebase.firestore.QuerySnapshot> => {
     return limit 
       ? db.collection('/pictures').limit(limit).get()
       : db.collection('/pictures').get();
 };
 
-export const getWeddingPic = (id) => {
+export const getWeddingPic = (id: string): Promise<firebase.firestore.DocumentSnapshot> => {
     return db.collection('/pictures').doc(id).get();
 }
 
-export const getHousePics = (limit) => {
+export const getHousePics = (limit: number): Promise<firebase.firestore.QuerySnapshot> => {
     return limit 
       ? db.collection('/housePictures').orderBy('index').limit(limit).get()
       : db.collection('/housePictures').orderBy('index').get();
 };
 
-export const getHousePic = (id) => {
+export const getHousePic = (id: string): Promise<firebase.firestore.DocumentSnapshot> => {
   return db.collection('/housePictures').doc(id).get();
 }
 
-export const getExperience = () => {
+export const getExperience = (): Promise<firebase.firestore.QuerySnapshot> => {
   return db.collection('/experience').get();
 };
+
+export const queryThen = (snapshot: firebase.firestore.QuerySnapshot) => {
+
+}
