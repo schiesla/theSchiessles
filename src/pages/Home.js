@@ -6,7 +6,7 @@ import * as FirestoreService from '../services/firestore';
 class Home extends React.Component {
     render() {
        return (
-         <Row className="justify-content-md-center space-above">
+         <Row className="justify-content-md-center">
             <ImageCarousel 
                title = "Our Homes Journey" 
                search = {FirestoreService.getHousePics} />

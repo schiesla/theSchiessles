@@ -30,7 +30,7 @@ function ImageCarousel(props) {
                                     className="d-block w-100"
                                     src={obj.url}
                                     alt="Wedding Pictures"/>
-                                    <Carousel.Caption>Date goes here</Carousel.Caption>
+                                    {/* <Carousel.Caption>Date goes here</Carousel.Caption> */}
                                     </Carousel.Item>);
                         })}
                     </Carousel>
