@@ -1,7 +1,5 @@
-import React from 'react';
-import { Form, Navbar } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
-import { setTheme } from '../redux/actions/actions';
+import { Navbar } from 'react-bootstrap';
+import { useSelector } from 'react-redux';
 import { AppState } from '../redux/reducer';
 import { Theme } from '../interfaces/Theme';
 

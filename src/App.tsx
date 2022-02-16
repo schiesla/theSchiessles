@@ -1,4 +1,3 @@
-import React from "react";
 import { NavBar } from "./components/NavBar";
 import { Theme } from './interfaces/Theme';
 
@@ -6,7 +5,6 @@ import Routes from "./Routes";
 import { useDispatch, useSelector } from "react-redux";
 import { AppState } from "./redux/reducer";
 import { setTheme } from "./redux/actions/actions";
-import { Navbar } from "react-bootstrap";
 
 export const  App = () => {
   const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);

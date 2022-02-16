@@ -31,7 +31,7 @@ export const ImageCarousel: FC<CarouselProps> = (props): JSX.Element =>  {
 
     if (pictures) {
         return (
-            <Card style={{ width: '50%', color: currentTheme.onSurface, backgroundColor: currentTheme.surface}}>
+            <Card style={{objectFit: "cover", width: '40%', color: currentTheme.onSurface, backgroundColor: currentTheme.surface}}>
                 <Card.Header>{props.title}</Card.Header>
                 <Card.Body>
                     <Carousel fade>
@@ -41,7 +41,6 @@ export const ImageCarousel: FC<CarouselProps> = (props): JSX.Element =>  {
                                     className="d-block w-100"
                                     src={obj.url}
                                     alt="Wedding Pictures"/>
-                                    {/* <Carousel.Caption>Date goes here</Carousel.Caption> */}
                                     </Carousel.Item>);
                         })}
                     </Carousel>
