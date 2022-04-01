@@ -13,7 +13,7 @@ class Main extends React.Component {
   }
 
    componentWillMount() {
-      getHousePic('6qlkWV1xbtCFezSXHu4J').then(doc => this.setState({housePicUrl: doc.data().url}));
+      getHousePic('LUrUFMGD20jRjijEifyN').then(doc => this.setState({housePicUrl: doc.data().url}));
       getWeddingPic('4EJRVIgUo85e8kwxJSM5').then(doc => this.setState({weddingPicUrl: doc.data().url}));
    }
 

@@ -17,13 +17,18 @@ export const ImageCarousel: FC<CarouselProps> = (props): JSX.Element =>  {
     const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);
 
 
+    function toBasicDate(dateNumber: number) {
+        return new Date(dateNumber).toLocaleDateString("en-US");
+    }
+
     useEffect(() => {
         var search = props.search || (() => null);
         search().then((querySnapshot: firebase.firestore.QuerySnapshot) => {
             querySnapshot.forEach((doc) => {
                 setPictures(pictures => [...pictures, {
                     id: doc.id,
-                    url: doc.data().url}]);
+                    url: doc.data().url,
+                    date: doc.data().date}]);
             })
         })
         .catch(() => console.log("ERROR"));
@@ -37,11 +42,15 @@ export const ImageCarousel: FC<CarouselProps> = (props): JSX.Element =>  {
                     <Carousel fade>
                         {pictures.map((obj) => {
                             return (
-                                <Carousel.Item key={obj.id}><img
-                                    className="d-block w-100"
-                                    src={obj.url}
-                                    alt="Wedding Pictures"/>
-                                    </Carousel.Item>);
+                                <Carousel.Item key={obj.id}>
+                                    <img
+                                        className="d-block w-100"
+                                        src={obj.url}
+                                        alt="Pictures"/>
+                                    <Carousel.Caption>
+                                        {toBasicDate(obj.date)}
+                                    </Carousel.Caption>
+                                </Carousel.Item>);
                         })}
                     </Carousel>
                 </Card.Body>

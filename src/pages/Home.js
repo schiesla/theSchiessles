@@ -8,7 +8,7 @@ class Home extends React.Component {
        return (
          <Row className="justify-content-md-center">
             <ImageCarousel 
-               title = "Our Homes Journey" 
+               title = "First Home Build" 
                search = {FirestoreService.getHousePics} />
          </Row>
        )
