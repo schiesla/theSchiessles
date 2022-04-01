@@ -25,8 +25,8 @@ export const getWeddingPic = (id: string): Promise<firebase.firestore.DocumentSn
 
 export const getHousePics = (limit: number): Promise<firebase.firestore.QuerySnapshot> => {
     return limit 
-      ? db.collection('/housePictures').orderBy('index').limit(limit).get()
-      : db.collection('/housePictures').orderBy('index').get();
+      ? db.collection('/housePictures').orderBy('date').limit(limit).get()
+      : db.collection('/housePictures').orderBy('date').get();
 };
 
 export const getHousePic = (id: string): Promise<firebase.firestore.DocumentSnapshot> => {
