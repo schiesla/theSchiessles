@@ -20,14 +20,12 @@ export const  App = () => {
     dispatch(setTheme(evt.matches ? themes[0] : themes[1]));
   });
 
-  document.getElementsByTagName("html")[0].style.backgroundColor = currentTheme.background;
-    
+  document.getElementsByTagName("body")[0].style.backgroundColor = currentTheme.background;
+
   return (
-    <div>
+    <>
       <NavBar />
-      <div className="background-match" style={{height: '100vh', backgroundColor: currentTheme.background}}>
       <Routes />
-      </div>
-    </div>
+    </>
   );
 }

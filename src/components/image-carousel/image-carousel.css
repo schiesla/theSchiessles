@@ -1,0 +1,12 @@
+.carousel-card {
+    object-fit: cover;
+    margin-top: 60px;
+    width: 40%;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel-card {
+        width: 100%;
+    }
+
+}

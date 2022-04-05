@@ -58,3 +58,12 @@ html {
 .space-above {
   margin-top: 3%;
 }
+
+.background-match {
+  background-color: inherit;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+}

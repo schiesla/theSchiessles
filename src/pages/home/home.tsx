@@ -1,16 +1,16 @@
 import React from 'react';
-import Row from "react-bootstrap/Row";
-import ImageCarousel from '../components/ImageCarousel';
-import * as FirestoreService from '../services/firestore';
+import ImageCarousel from '../../components/image-carousel/image-carousel';
+import * as FirestoreService from '../../services/firestore';
+import './home.css';
 
 class Home extends React.Component {
     render() {
        return (
-         <Row className="justify-content-md-center">
+         <div className='home'>
             <ImageCarousel 
                title = "First Home Build" 
                search = {FirestoreService.getHousePics} />
-         </Row>
+         </div>
        )
     }
   }

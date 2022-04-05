@@ -1,7 +1,8 @@
 import React from 'react';
-import Row from "react-bootstrap/Row";
-import TopicCard from '../components/TopicCard';
-import { getHousePic, getWeddingPic } from '../services/firestore';
+import TopicCard from '../../components/topic-card/topic-card';
+import { getHousePic, getWeddingPic } from '../../services/firestore';
+import './main.css';
+
 
 class Main extends React.Component {
    constructor(props) {
@@ -19,7 +20,7 @@ class Main extends React.Component {
 
     render() {
        return (
-        <Row className="justify-content-around align-content-center background-match" style={{height: '100%'}}>
+        <div className='main'>
             {/* <Row className="justify-content-around space-above"> */}
                <TopicCard route="/home" title="The House" picture={this.state.housePicUrl}/>
                <TopicCard route="/wedding" title="The Wedding" picture={this.state.weddingPicUrl}/>
@@ -28,7 +29,7 @@ class Main extends React.Component {
                {/* <TopicCard route="/eats" title = "The Eats" picture={this.state.housePicUrl}/>
                <TopicCard route="/blog" title = "The Blog" picture={this.state.housePicUrl}/> */}
             {/* </Row> */}
-          </Row>
+          </div>
        )
     }
 }

@@ -1,10 +1,11 @@
 import React, {useState, useEffect, FC} from 'react';
 import { Carousel, Card } from 'react-bootstrap';
 import firebase from "firebase/app"
-import { Picture } from '../interfaces/Picture';
-import { Theme } from '../interfaces/Theme';
+import { Picture } from '../../interfaces/Picture';
+import { Theme } from '../../interfaces/Theme';
 import { useSelector } from 'react-redux';
-import { AppState } from '../redux/reducer';
+import { AppState } from '../../redux/reducer';
+import './image-carousel.css';
 
 export interface CarouselProps {
     search: Function,
@@ -17,8 +18,10 @@ export const ImageCarousel: FC<CarouselProps> = (props): JSX.Element =>  {
     const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);
 
 
-    function toBasicDate(dateNumber: number) {
-        return new Date(dateNumber).toLocaleDateString("en-US");
+    function toBasicDate(dateNumber: number):string {
+        return dateNumber 
+            ? new Date(dateNumber).toLocaleDateString("en-US")
+            : "";
     }
 
     useEffect(() => {
@@ -36,7 +39,7 @@ export const ImageCarousel: FC<CarouselProps> = (props): JSX.Element =>  {
 
     if (pictures) {
         return (
-            <Card style={{objectFit: "cover", width: '40%', color: currentTheme.onSurface, backgroundColor: currentTheme.surface}}>
+            <Card className="carousel-card" style={{color: currentTheme.onSurface, backgroundColor: currentTheme.surface}}>
                 <Card.Header>{props.title}</Card.Header>
                 <Card.Body>
                     <Carousel fade>

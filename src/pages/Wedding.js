@@ -1,5 +1,5 @@
 import React from 'react';
-import ImageCarousel from '../components/ImageCarousel';
+import ImageCarousel from '../components/image-carousel/image-carousel';
 import {Row} from "react-bootstrap";
 import * as FirestoreService from '../services/firestore';
 
