@@ -13,15 +13,15 @@ class Light implements Theme {
     onError: string;
 
     constructor() {
-        this.primary = "#6200EE";
-        this.secondary = "#03DAC6";
-        this.background = "#FFFFFF";
-        this.surface = "#FFFFFF";
+        this.primary = "#f9a109";
+        this.secondary = "#09f9a1";
+        this.background = "#ece8e1";
+        this.surface = "#e3ddd2";
         this.error = "#B00020";
-        this.onPrimary = "#FFFFFF";
+        this.onPrimary = "#191001";
         this.onSecondary = "#000000";
-        this.onBackground = "#000000";
-        this.onSurface = "#000000";
+        this.onBackground = "#191001";
+        this.onSurface = "#191001";
         this.onError = "#FFFFFF";
     }
 }
@@ -39,15 +39,15 @@ class Dark implements Theme {
     onError: string;
 
     constructor() {
-        this.primary = "#BB86FC";
-        this.secondary = "#03DAC6";
-        this.background = "#121212";
-        this.surface = "#2a2a2a";
+        this.primary = "#a28c6a";
+        this.secondary = "#f9a109";
+        this.background = "#3e3628";
+        this.surface = "#4d4332";
         this.error = "#CF6679";
         this.onPrimary = "#000000";
         this.onSecondary = "#000000";
-        this.onBackground = "#FFFFFF";
-        this.onSurface = "#FFFFFF";
+        this.onBackground = "#edeceb";
+        this.onSurface = "#edeceb";
         this.onError = "#000000";
     }
 }

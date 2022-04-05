@@ -16,7 +16,7 @@ export const TopicCard: FC<TopicProps> = (props): JSX.Element => {
     const currentTheme: Theme = useSelector((state: AppState) => state.currentTheme);
 
     return (
-        <Link to={props.route}>
+        <Link className="topic-link" to={props.route}>
             <div className='tcard' style={{backgroundColor: currentTheme.surface}}>
                 <div className='img-container'>
                     <img src={props.picture} alt={props.title}/>
