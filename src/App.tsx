@@ -1,4 +1,4 @@
-import { NavBar } from "./components/NavBar";
+import { NavBar } from "./components/nav-bar/nav-bar";
 import { Theme } from './interfaces/Theme';
 
 import Routes from "./Routes";
