@@ -10,7 +10,7 @@ export const NavBar = () => {
     return (
         <Navbar sticky="top" style={{backgroundColor: currentTheme.primary}} variant="dark" expand="lg">
             <Navbar.Brand href="/">
-                <img className='brand-img' src='schiessles_black.png' alt='the schiessles logo'/>
+                <img className='brand-img' src={process.env.PUBLIC_URL + '/schiessles_black.png'} alt='the schiessles logo'/>
             </Navbar.Brand>
         </Navbar>
     );
