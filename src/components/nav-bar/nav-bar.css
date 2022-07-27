@@ -1,3 +1,22 @@
 .navbar .brand-img {
     height: 50px;
 }
+
+.navbar .nav-drop a {
+    color: black;
+}
+
+.navbar .nav-drop a::after {
+    content: none;
+}
+
+.navbar .btn-link {
+    color: black;
+    padding: .2rem .5rem;
+}
+
+.navbar .btn-link:focus,
+.navbar .btn-link:active {
+    outline: none;
+    box-shadow: none;
+}
