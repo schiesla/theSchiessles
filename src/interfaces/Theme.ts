@@ -1,4 +1,10 @@
+export enum ThemeStyle {
+    DARK,
+    LIGHT,
+    SYSTEM
+}
 export interface Theme {
+    style: ThemeStyle,
     primary: string,
     secondary: string,
     background: string,
